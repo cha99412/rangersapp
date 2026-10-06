@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+  />
+
+  <title>下載《LINE Rangers銀河特攻隊》</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      overscroll-behavior: none;
+    }
+
+    body {
+      position: fixed;
+      inset: 0;
+
+      width: 100vw;
+      height: 100vh;
+      height: 100dvh;
+
+      background: #f5f5f5;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                   "Noto Sans TC", "PingFang TC", "Microsoft JhengHei",
+                   sans-serif;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding:
+        env(safe-area-inset-top)
+        env(safe-area-inset-right)
+        env(safe-area-inset-bottom)
+        env(safe-area-inset-left);
+    }
+
+    .card {
+      width: min(100%, 420px);
+      height: 100%;
+      max-height: 100dvh;
+
+      padding: 18px 16px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .logo {
+      width: clamp(70px, 22vw, 100px);
+      height: auto;
+      flex: 0 0 auto;
+      margin: 0 0 14px;
+    }
+
+    h1 {
+      width: 100%;
+      max-width: 100%;
+      margin: 0 0 10px;
+      padding: 0;
+
+      font-size: clamp(18px, 5.2vw, 24px);
+      line-height: 1.3;
+      font-weight: 700;
+      text-align: center;
+
+      white-space: normal;
+      word-break: keep-all;
+      overflow-wrap: break-word;
+    }
+
+    .description {
+      width: 100%;
+      margin: 0 0 18px;
+
+      font-size: clamp(13px, 3.8vw, 16px);
+      line-height: 1.4;
+      text-align: center;
+    }
+
+    .store-buttons {
+      width: 100%;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+
+      flex: 0 0 auto;
+    }
+
+    .store-buttons a {
+      display: block;
+      width: min(280px, 78vw);
+      max-width: 100%;
+    }
+
+    .store-image {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 58px;
+      object-fit: contain;
+    }
+
+    .note {
+      width: 100%;
+      margin: 14px 0 0;
+
+      font-size: clamp(11px, 3vw, 14px);
+      line-height: 1.4;
+      color: #666;
+      text-align: center;
+    }
+
+    /* 窄螢幕：縮小標題，避免左右被裁切 */
+    @media (max-width: 390px) {
+      .card {
+        padding-left: 12px;
+        padding-right: 12px;
+      }
+
+      h1 {
+        font-size: 18px;
+      }
+    }
+
+    /* 非常窄的手機 */
+    @media (max-width: 340px) {
+      h1 {
+        font-size: 16px;
+      }
+
+      .description {
+        font-size: 12px;
+      }
+    }
+
+    /* 螢幕高度不足時，自動縮短上下空間 */
+    @media (max-height: 650px) {
+      .card {
+        padding-top: 8px;
+        padding-bottom: 8px;
+      }
+
+      .logo {
+        width: 64px;
+        margin-bottom: 8px;
+      }
+
+      h1 {
+        margin-bottom: 6px;
+        font-size: 17px;
+      }
+
+      .description {
+        margin-bottom: 10px;
+        font-size: 12px;
+      }
+
+      .store-buttons {
+        gap: 6px;
+      }
+
+      .store-buttons a {
+        width: min(240px, 72vw);
+      }
+
+      .store-image {
+        max-height: 44px;
+      }
+
+      .note {
+        margin-top: 8px;
+        font-size: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="card">
+
+    <img
+      src="rangers.png"
+      alt="App Logo"
+      class="logo"
+    />
+
+    <h1>下載《LINE Rangers銀河特攻隊》</h1>
+
+    <p class="description">
+      請選擇您的手機系統下載 App
+    </p>
+
+    <div class="store-buttons">
+
+      <a
+        href="https://apps.apple.com/tw/app/line-rangers-率領熊大和兔兔來大戰一番吧/id767265270"
+        target="_blank"
+        rel="noopener"
+      >
+        <img
+          src="appstore-button.png"
+          alt="App Store 下載"
+          class="store-image"
+        />
+      </a>
+
+      <a
+        href="https://play.google.com/store/apps/details?id=com.linecorp.LGRGS&pcampaignid=web_share"
+        target="_blank"
+        rel="noopener"
+      >
+        <img
+          src="googleplay-button.png"
+          alt="Google Play 下載"
+          class="store-image"
+        />
+      </a>
+
+    </div>
+
+    <p class="note">
+      若沒有自動開啟下載頁面，請點選上方對應的商店。
+    </p>
+
+  </main>
+</body>
+</html>
